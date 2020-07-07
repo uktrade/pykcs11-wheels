@@ -1,0 +1,14 @@
+- package_name: pykcs11
+  test_command: python -c "from PyKCS11 import PyKCS11"
+  before_build: yum -y install swig
+  test_requires: []
+  python_versions:
+    '1.57':
+      - cp36
+      - cp37
+      - cp38
+    '1.5.8':
+      - cp36
+      - cp37
+      - cp38
+      - cp39
