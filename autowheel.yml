@@ -1,13 +1,13 @@
 - package_name: pykcs11
   test_command: python -c "from PyKCS11 import PyKCS11"
-  before_build: yum -y install swig
+  before_build: "curl -L https://sourceforge.net/projects/swig/files/swig/swig-2.0.12/swig-2.0.12.tar.gz/download --output /tmp/swig-2.0.12.tar.gz && cd /tmp && tar -xf ./swig-2.0.12.tar.gz && cd /tmp/swig-2.0.12/ && ./configure --without-pcre && make && make install"
   test_requires: []
   python_versions:
-    '1.57':
+    "1.57":
       - cp36
       - cp37
       - cp38
-    '1.5.8':
+    "1.5.8":
       - cp36
       - cp37
       - cp38

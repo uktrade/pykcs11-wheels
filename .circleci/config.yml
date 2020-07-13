@@ -1,8 +1,6 @@
 version: 2.1
 jobs:
   build:
-    environment:
-      CIBW_MANYLINUX_X86_64_IMAGE: manylinux2014
     docker:
       - image: circleci/python:3.8
     steps:
